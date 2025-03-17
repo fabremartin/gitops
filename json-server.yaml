@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: json-server
+  name: json-server-test
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: json-server
+      app: json-server-test
   template:
     metadata:
       labels:
-        app: json-server
+        app: json-server-test
     spec:
       containers:
-        - name: json-server
+        - name: json-server-test
           image: regsitry14032025.azurecr.io/json-server:v1
           ports:
             - containerPort: 3000
