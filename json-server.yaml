@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: json-server
-          image: regsitry14032025.azurecr.io/json-server:d92e9276beb8b5425a4eac41be6b3f7132620207
+          image: regsitry14032025.azurecr.io/json-server:d7754266d79bb1c00f274e612564d7b99a948b12
           ports:
             - containerPort: 3000
 ---
