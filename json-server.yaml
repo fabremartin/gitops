@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: json-server
-          image: regsitry10032025.azurecr.io/kebab:v2
+          image: regsitry10032025.azurecr.io/json-server:v1
           ports:
             - containerPort: 3000
 ---
