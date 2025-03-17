@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: json-server-test
-          image: regsitry14032025.azurecr.io/json-server:v1
+          image: regsitry14032025.azurecr.io/json-server
           ports:
             - containerPort: 3000
 ---
