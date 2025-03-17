@@ -17,7 +17,7 @@ spec:
           image: regsitry14032025.azurecr.io/json-server:d7754266d79bb1c00f274e612564d7b99a948b12
           ports:
             - containerPort: 3000
-          resource:
+          resources:
             cpu: "100m"
             memory: "128Mi"
 
