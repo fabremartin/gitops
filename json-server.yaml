@@ -36,5 +36,25 @@ spec:
     app: json-server
   ports:
     - protocol: TCP
-      port: 80        # Expose the service on port 80
-      targetPort: 3000 # Forward traffic to container port 3000
+      port: 80
+      targetPort: 3000 
+
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: json-server-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: json-server
+  minReplicas: 1
+  maxReplicas: 3
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 50 
