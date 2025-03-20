@@ -8,11 +8,11 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: json-server
+      chart: helm/json-server
       version: "0.1.0"
       sourceRef:
         kind: HelmRepository
-        name: json-server
+        name: helm
   values:
     replicaCount: 1
     image:
