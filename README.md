@@ -14,6 +14,9 @@ I use a GitOps approach to manage our Kubernetes resources. This repository is t
 
 ```
 
+![image](https://github.com/user-attachments/assets/415bcd12-1d03-4ce8-ad9e-86839cd98818)
+
+
 ## Workflow
 
 The key workflow for this repository is:
