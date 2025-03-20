@@ -1,0 +1,8 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: helm-repo
+  namespace: default
+spec:
+  interval: 10m
+  url: oci://regsitry14032025.azurecr.io
