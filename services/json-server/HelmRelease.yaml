@@ -17,7 +17,7 @@ spec:
     replicaCount: 1
     image:
       repository: regsitry14032025.azurecr.io/json-server
-      tag: "901f9cc6ea7cbbba523d0a07340c5e61377aeca1"
+      tag: 0.1.1
     service:
       type: LoadBalancer
       port: 80
