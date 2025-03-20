@@ -7,3 +7,5 @@ spec:
   interval: 10m
   url: oci://regsitry14032025.azurecr.io/helm
   type: oci
+  secretRef:
+    name: flux-azure-registry
