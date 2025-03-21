@@ -9,10 +9,21 @@ I use a GitOps approach to manage our Kubernetes resources. This repository is t
 ## Repository Structure
 
 ```
-├── json-server.yaml         # Deployment and Service for our JSON Server
-└── other-manifests.yaml     # Additional application manifests
+Gitops Repo
+├── helm-repositories         # Helm repository configuration and secrets
+│   ├── repository.yaml       # Definition of the Helm repository
+│
+├── services/json-server      # Manifests for json-server
+│   ├── kustomization.yaml    # Kustomization file for json-server
+│   ├── HelmRelease.yaml      # HelmRelease for json-server
+│   ├── values.yaml           # Custom Helm values for json-server
+│
+├── kustomization.yaml    # Kustomization file for FluxCD
+
 
 ```
+
+## Global architecture schema
 
 ![image](https://github.com/user-attachments/assets/415bcd12-1d03-4ce8-ad9e-86839cd98818)
 
@@ -23,7 +34,7 @@ The key workflow for this repository is:
 
 1. Changes to application code in microservice/app repositories trigger their CI pipelines
 2. Those CI pipelines build and tag docker images then pushes it to the ACR
-3. The CI pipeline then updates the corresponding manifest in this GitOps repository with the new image tag
+3. The CI pipeline then updates the corresponding manifest in this GitOps repository with the new image tag and chart version
 4. The GitOps operator (Flux) detects changes and applies them to the cluster
 
 This approach ensures that:
